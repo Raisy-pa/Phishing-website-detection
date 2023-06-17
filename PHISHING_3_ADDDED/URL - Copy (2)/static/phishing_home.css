@@ -1,0 +1,235 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1197275/oceanBackdrop.jpg);/*https://www.wuwm.com/post/poem-underwater-unsettlement#stream/0 */
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+
+
+.hook {
+	margin: 0 auto;
+	padding-left: 70%;
+	top: 0;
+	width: 200px;
+	animation: hookMoveUpDown 4s linear infinite;
+	-webkit-animation: hookMoveUpDown 4s linear infinite;
+	-moz-animation: hookMoveUpDown 4s linear infinite;
+	position: absolute;
+
+  }
+  
+  @-webkit-keyframes hookMoveUpDown {
+	0%, 100% {
+	  top: -8px;
+	  left: 0;
+	}
+	25% {
+	  left: -5px;
+	}
+	50% {
+	  top: -18px;
+	  left: 0;
+	}
+	75% {
+	  left: 5px;
+	}
+  }
+  
+  @-moz-keyframes hookMoveUpDown {
+	0%, 100% {
+	  top: -8px;
+	  left: 0;
+	}
+	25% {
+	  left: -5px;
+	}
+	50% {
+	  top: -18px;
+	  left: 0;
+	}
+	75% {
+	  left: 5px;
+	}
+  }
+  
+  @keyframes hookMoveUpDown {
+	0%, 100% {
+	  top: -8px;
+	  left: 0;
+	}
+	25% {
+	  left: -5px;
+	}
+	50% {
+	  top: -18px;
+	  left: 0;
+	}
+	75% {
+	  left: 5px;
+	}
+  }
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 100px;
+  height: 46px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+
+
+
+*/
+
+
+
+.center-outer {
+	display: table;
+	width: 100%;
+	height: 100%;
+	}
+	
+	.center-inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+	}
+	
+	/* Essential CSS - Makes the effect work */
+	
+
+	
+	.bubbles {
+	display: inline-block;
+	font-family: arial;
+	position: relative;
+	}
+	
+	.bubbles h1 {
+	position: relative;
+	margin: 1em 0 0;
+	font-family: 'Luckiest Guy', cursive;
+	color: #fff;
+	z-index: 2;
+	}
+	
+	.individual-bubble {
+	position: absolute;
+	border-radius: 100%;
+	bottom: 10px;
+	background-color: #fff;
+	z-index: 1;
+	}
+
+	.loader {
+		font-size: 10px;
+		margin: 50px auto;
+		text-indent: -9999em;
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		background: #ffffff;
+		background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+		position: relative;
+		-webkit-animation: load3 1.4s infinite linear;
+		animation: load3 1.4s infinite linear;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+	  }
+	  .loader:before {
+		width: 50%;
+		height: 50%;
+		background: #ffffff;
+		border-radius: 100% 0 0 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+	  }
+	  .loader:after {
+		background: #0dc5c1;
+		width: 75%;
+		height: 75%;
+		border-radius: 50%;
+		content: '';
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	  }
+	  @-webkit-keyframes load3 {
+		0% {
+		  -webkit-transform: rotate(0deg);
+		  transform: rotate(0deg);
+		}
+		100% {
+		  -webkit-transform: rotate(360deg);
+		  transform: rotate(360deg);
+		}
+	  }
+	  @keyframes load3 {
+		0% {
+		  -webkit-transform: rotate(0deg);
+		  transform: rotate(0deg);
+		}
+		100% {
+		  -webkit-transform: rotate(360deg);
+		  transform: rotate(360deg);
+		}
+	  }
+	  

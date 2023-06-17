@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Phish Detector</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='3075494.png') }}" sizes="16x16">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static',filename='result.css') }}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static',filename='main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ url_for('static',filename='phishing_home.js') }}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet">
+    
+</head>
+
+<body>
+    <h1 style="text-align: center;"><span style="font-size: 50px; color:aqua">P</span>HISHING <span
+            style="font-size: 50px; color:aqua">D</span>ETECTER
+</h1>
+    <img class="hook" src="{{ url_for('static',filename='phishing_318-755502.png') }}" />
+    <div style="display: flex; justify-content: center;align-items: center;">
+        {% if phishing == 1 %}
+        <h1 style="color: rgb(233, 20, 20);">PHISHING DETECTED!!!!</h1>
+        {% else %}
+        <h1 style="color: rgb(6, 86, 6);">PHISHING NOT DETECTED</h1>
+        {% endif %}
+    </div>  
+    <br>
+
+    <div class="container">
+        {% for item in range(result|length)  %}
+        <div class="row">
+                <div class="card card-1">
+                    <h3 style="color: rgb(0, 33, 220);">{{result[item][0]}} : {{result[item][1]}}</h3>
+                    <p>{{result[item][2]}}</p>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+   
+</body>
+
+</html>
